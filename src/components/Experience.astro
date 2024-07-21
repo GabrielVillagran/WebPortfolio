@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+{    
+date: 'December 2022 - Present',
+    title: 'IOT Engineer | Transom',
+    description:
+    "Designed and deployed SCADA systems for airports using ICONICS. Managed and visualized data from BACnet and OPC sources. Implemented alarm systems and predictive maintenance for equipment optimization. Created EMCS dashboards in Ignition with PostgreSQL integration. Migrated and implemented a production line SCADA system with WinCC and SQL, resolving legacy code issues in C and Visual Basic."
+},
+{    
+date: 'September 2021 - March 2022',
+    title: 'Compulsory Community Service | Universidad Autónoma de San Luis Potosí',
+    description: 'Conducted R&D of neural network algorithms to enhance TCP protocol applications, improving network security and efficiency. Analyzed log systems to generate detailed reports and mitigate security vulnerabilities. Provided IT support at Facultad de Contaduría y Administración, assisting faculty and students with technical issues. Developed a user-friendly web application using PHP, HTML, CSS, and JavaScript.'
+},
+{    
+date: 'July 2018 - August 2019',
+    title: 'Research Assistant | Universidad Autónoma de San Luis Potosí',
+    description: 'Conducted thorough code analysis for simulation purposes and bug identification, focusing on system logs for errors and code execution times to ensure accuracy and efficiency. Implemented solutions to minimize downtime and optimize system performance, enhancing user experience and operational efficiency. Developed comprehensive installation guides, providing clear instructions for seamless software implementation and maintenance.'
+},
+{    
+date: ' May 2021 - August 2021',
+    title: 'Penetration Tester Intern | IXMATIX Robotics',
+    description: 'Conducted penetration testing on the companys platform using tools like Dirbuster, WafW00f, Wireshark, BurpSuite, Shodan, Nessus, Zphisher, and Maskphish to identify vulnerabilities and enhance security. Employed OSINT techniques to gather information and improve platform security. Researched best practices for server security, contributing to the development of secure systems and protocols. Implemented and executed unit testing for the platform using Python, ensuring software reliability and functionality.'
+
+}
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 text-white">
+    {
+        // Renderiza la lista con cada uno de los datos de experience
+       EXPERIENCE.map(experience => (
+       <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+       </li>
+       )) 
+    }                  
+</ol>
+
